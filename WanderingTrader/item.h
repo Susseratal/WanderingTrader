@@ -17,13 +17,14 @@ public:
 		junk
 	};
 
-	Item(int itemQuantity);
 	string getItemName();
 	itemTypes getItemType();
 	float getItemVal();
 	int getItemQuantity();
 
 protected: 
+	Item(string itemName, itemTypes itemType, float itemVal, int itemQuantity);
+
 	string selfName = "Item";
 	itemTypes selfType = itemTypes::junk;
 	float selfVal = 0;

@@ -1,8 +1,10 @@
 #include "item.h"
 
-Item::Item(int itemQuantity) {
-	selfQuantity = itemQuantity;
-}
+Item::Item(string itemName, itemTypes itemType, float itemVal, int itemQuantity) :
+	selfName(itemName),
+	selfType(itemType),
+	selfVal(itemVal),
+	selfQuantity(itemQuantity) {}
 
 string Item::getItemName() {
 	return selfName;
@@ -20,8 +22,4 @@ int Item::getItemQuantity() {
 	return selfQuantity;
 }
 
-Rock::Rock(int selfQuantity) : Item(selfQuantity) {
-	selfName = "Rock";
-	selfType = itemTypes::junk;
-	selfVal = 0.2;
-}
+Rock::Rock(int itemQuantity) : Item("Rock", itemTypes::junk, 0.2, itemQuantity) {}
