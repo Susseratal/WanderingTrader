@@ -9,31 +9,48 @@ using namespace std;
 
 class Item {
 public: 
-	enum itemTypes {
-		clothes,
-		weapon,
-		food,
-		material,
-		junk
-	};
-
 	string getItemName();
-	itemTypes getItemType();
-	float getItemVal();
+	int getItemVal();
 	int getItemQuantity();
+	float getItemWeight();
 
 protected: 
-	Item(string itemName, itemTypes itemType, float itemVal, int itemQuantity);
+	Item(string itemName, int itemVal, int itemQuantity, float itemWeight);
 
-	string selfName = "Item";
-	itemTypes selfType = itemTypes::junk;
-	float selfVal = 0;
-	int selfQuantity = 0;
+	string selfName;
+	int selfVal;
+	int selfQuantity;
+	float selfWeight;
 };
 
 /* /////////////////// */
 
-class Rock : public Item {
+class Stone : public Item {
 public: 
-	Rock(int itemQuantity);
+	Stone(int itemQuantity);
+};
+
+class Wood : public Item {
+public:
+	Wood(int itemQuantity);
+};
+
+class Iron : public Item {
+public:
+	Iron(int itemQuantity);
+};
+
+class Bread : public Item {
+public:
+	Bread(int itemQuantity);
+};
+
+class Fish : public Item {
+public:
+	Fish(int itemQuantity);
+};
+
+class Carrot : public Item {
+public:
+	Carrot(int itemQuantity);
 };

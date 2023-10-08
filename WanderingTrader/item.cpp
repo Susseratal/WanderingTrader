@@ -1,20 +1,16 @@
 #include "item.h"
 
-Item::Item(string itemName, itemTypes itemType, float itemVal, int itemQuantity) :
+Item::Item(string itemName, int itemVal, int itemQuantity, float itemWeight) :
 	selfName(itemName),
-	selfType(itemType),
 	selfVal(itemVal),
-	selfQuantity(itemQuantity) {}
+	selfQuantity(itemQuantity),
+	selfWeight(itemWeight) {}
 
 string Item::getItemName() {
 	return selfName;
 }
 
-Item::itemTypes Item::getItemType() {
-	return selfType;
-}
-
-float Item::getItemVal() {
+int Item::getItemVal() { 
 	return selfVal;
 }
 
@@ -22,4 +18,13 @@ int Item::getItemQuantity() {
 	return selfQuantity;
 }
 
-Rock::Rock(int itemQuantity) : Item("Rock", itemTypes::junk, 0.2, itemQuantity) {}
+float Item::getItemWeight() {
+	return selfWeight;
+}
+
+Stone::Stone(int itemQuantity) : Item("Stone", 5, itemQuantity, 5) {}
+Wood::Wood(int itemQuantity) : Item("Wood", 2, itemQuantity, 3) {}
+Iron::Iron(int itemQuantity) : Item("Iron Ore", 8, itemQuantity, 7) {}
+Bread::Bread(int itemQuantity) : Item("Bread", 6, itemQuantity, 1) {}
+Fish::Fish(int itemQuantity) : Item("Fish", 2, itemQuantity, 0.5) {}
+Carrot::Carrot(int itemQuantity) : Item("Carrot", 1, itemQuantity, 0.2) {}
