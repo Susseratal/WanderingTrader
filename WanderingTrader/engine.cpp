@@ -3,9 +3,9 @@
 #include <thread>
 #include <chrono>
 #include <iostream>
+#include <cstdlib>
 
 #include "engine.h"
-
 
 using namespace std;
 
@@ -28,6 +28,14 @@ namespace Engine {
 		{'i', av_inventory},
 		{'q', av_quit}
 	};
+
+	void clearScreen() {
+	#ifdef WINDOWS
+		system("cls");
+	#else
+		system("clear");
+	#endif
+	}
 
 	void printString(string text) {
 		int textLen = text.length();

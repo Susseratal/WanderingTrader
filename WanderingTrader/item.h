@@ -9,18 +9,27 @@ using namespace std;
 
 class Item {
 public: 
+	enum EconomyTypes {
+		Agriculture,
+		Mining,
+		Refinery,
+		Fishing,
+		Farming,
+	};
+
 	string getItemName();
 	int getItemVal();
 	int getItemQuantity();
 	float getItemWeight();
 
 protected: 
-	Item(string itemName, int itemVal, int itemQuantity, float itemWeight);
+	Item(string itemName, int itemVal, int itemQuantity, float itemWeight, EconomyTypes itemType);
 
 	string selfName;
 	int selfVal;
 	int selfQuantity;
 	float selfWeight;
+	EconomyTypes selfType;
 };
 
 /* /////////////////// */

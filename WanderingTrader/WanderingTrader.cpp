@@ -14,7 +14,7 @@ using namespace std;
 using namespace Engine;
 
 int main() {
-    system("clear");
+    clearScreen();
     printString("Choose a name for your character: ");
     string playerName;
     cin >> playerName;

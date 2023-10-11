@@ -21,6 +21,7 @@ namespace Engine {
 
 	extern map<char, Action> s_actionMappings;
 
+	void clearScreen();
 	void printString(string text);
 	string toTitle(string s);
 	string toLower(string s);
