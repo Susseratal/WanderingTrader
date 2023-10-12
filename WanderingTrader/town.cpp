@@ -1,9 +1,11 @@
 #include "town.h"
 
-Town::Town(string name, float xCoord, float yCoord) :
+Town::Town(string name, float xCoord, float yCoord, Item::EconomyTypes townRequires, Item::EconomyTypes townProduces) :
 	selfName(name),
 	selfXCoord(xCoord),
-	selfYCoord(yCoord) {
+	selfYCoord(yCoord),
+	selfRequires(townRequires),
+	selfProduces(townProduces){
 	// here goes the rest of a constructor
 }
 
@@ -31,4 +33,12 @@ int Town::getDistance(float currentX, float currentY) {
 	}
 
 	return (deltaX + deltaY);
+}
+
+Item::EconomyTypes Town::getRequired() {
+	return selfRequires;
+}
+
+Item::EconomyTypes Town::getProduced() {
+	return selfProduces;
 }

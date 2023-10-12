@@ -13,9 +13,10 @@ public:
 		Agriculture,
 		Mining,
 		Refinery,
-		Fishing,
-		Farming,
+		Livestock
 	};
+
+	map<string, EconomyTypes> s_EconomyNames;
 
 	string getItemName();
 	int getItemVal();
@@ -33,30 +34,49 @@ protected:
 };
 
 /* /////////////////// */
+/*       Mining        */
+/* /////////////////// */
 
 class Stone : public Item {
 public: 
 	Stone(int itemQuantity);
 };
 
-class Wood : public Item {
+class RawIron : public Item {
 public:
-	Wood(int itemQuantity);
+	RawIron(int itemQuantity);
 };
+
+/* /////////////////// */
+/*       Refinery       */
+/* /////////////////// */
 
 class Iron : public Item {
 public:
 	Iron(int itemQuantity);
 };
 
-class Bread : public Item {
-public:
-	Bread(int itemQuantity);
-};
+/* /////////////////// */
+/*      Livestock      */
+/* /////////////////// */
 
 class Fish : public Item {
 public:
 	Fish(int itemQuantity);
+};
+
+/* /////////////////// */
+/*      Agriculture      */
+/* /////////////////// */
+
+class Wood : public Item {
+public:
+	Wood(int itemQuantity);
+};
+
+class Bread : public Item {
+public:
+	Bread(int itemQuantity);
 };
 
 class Carrot : public Item {

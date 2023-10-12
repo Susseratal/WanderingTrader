@@ -32,16 +32,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="player.h">
+    <ClInclude Include="engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="town.h">
+    <ClInclude Include="player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="engine.h">
+    <ClInclude Include="town.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
